@@ -1,14 +1,14 @@
 {
   "name": "vueserver",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode=development",
     "prod": "webpack --mode=production",
     "watch": "webpack --watch",
-    "server": "nodemon server.js",
-    "start": "node server.js"
+    "server": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
   "devDependencies": {
     "css-loader": "^5.0.0",
     "file-loader": "^6.2.0",
+    "nodemon": "^2.0.6",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
     "vue-loader": "^15.9.4",
@@ -34,6 +35,5 @@
     "mysql2": "^2.2.5",
     "sweetalert2": "^10.8.1",
     "vue": "^2.6.12"
-  },
-  "description": ""
+  }
 }

@@ -1,32 +1,35 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import MainApp from '@/MainApp'
+import MainApp from '@/MainApp';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import swal from 'sweetalert2';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NewsComponent from '@/components/NewsComponent';
 import BoardComponent from '@/components/BoardComponent';
+
+import './app.css';
+
 Vue.use(Router);
+
 const router = new Router({
-    routes: [
+    routes:[
         {
-            path: '/',
-            name: 'news-page',
-            component: NewsComponent
+            path:'/',
+            name:'news-page',
+            component:NewsComponent
         },
         {
-            path: '/',
-            name: 'board-page',
-            component: BoardComponent
+            path:'/board',
+            name:'board-page',
+            component:BoardComponent
         }
     ]
 });
 
 window.swal = swal;
-window.onload = () => {
+window.onload = ()=>{
     new Vue({
-        el: "#app",
+        el:"#app",
         router,
         render: h => h(MainApp)
     })
